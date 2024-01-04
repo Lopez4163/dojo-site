@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+}
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+.navigation-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.navigation-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    list-style: none;
+
+
+}
+.navigation-link {
+    margin: 10px;
+
+}
+.navigation-link a {
+    display: block;
+    color:black;
+    padding: 10px;
+    text-decoration: none;
+
+}
+.navigation-link a:hover {
+    color: dimgrey;
+}
+.student-instructor-link a {
+    display: block;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: red;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.student-instructor-link a:hover {
+    background-color: darkred;
+    color: white;
+}
+
+nav .dropdown-menu {
+    display: none;
+    position: absolute ;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2.25rem;
+}
+
+nav .dropdown-menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 0.2rem;
+}
+
+@media screen and (max-width: 970px) {
+    .navigation-container .dropdown-menu {
+        display: flex;
+
+    }
+    .dropdown-menu {
+    }
+    .navigation-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation-logo {
+        justify-content: flex-start;
+    }
+    .navigation-links {
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+
+    }
+    .navigation-link {
+        margin: 0;
+        background-color: darkgrey;
+        width: 100%;
+        text-align: center;
+
+    }
+    .navigation-link:hover {
+        display: block;
+        background-color: dimgrey;
+    }
+    .student-instructor-link {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .student-instructor-link a {
+        margin: 0;
+        text-align: center;
+    }
+    .navigation-link a:hover {
+        color: white;
+    }
+    .navigation-container .navigation-links.open {
+        display: flex;
+        max-height: 500px;
+
+    }
+}
+
