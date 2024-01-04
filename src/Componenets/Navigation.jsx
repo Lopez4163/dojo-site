@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import { Outlet, Link } from "react-router-dom";
 import '../Styling/Navigation.css'
 
+
 const Navigation = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     return (
         <nav className='navigation-container'>
                 <div className='navigation-logo'>
-                <img src='https://i.imgur.com/8Z1zZ1V.png' alt='logo' />
-            </div>
+                    <img src='https://i.imgur.com/8Z1zZ1V.png' alt='logo' />
+                </div>
                 <div className='dropdown-menu' onClick={() => {
                     setDropdownOpen(!dropdownOpen)
                 }}>
@@ -16,6 +17,7 @@ const Navigation = () => {
                     <span></span>
                     <span></span>
                 </div>
+
                 <ul className={`${dropdownOpen ? "open" : ""} navigation-links`}>
                     <li className='navigation-link'>
                         <Link to="/">Home</Link>
