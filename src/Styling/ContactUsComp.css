@@ -1,0 +1,61 @@
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+    100% { transform: translateX(0); }
+}
+.contactus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Permanent Marker', cursive;
+}
+.contactus-info-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+.contactus-info  {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1rem;
+    gap: 15px;
+    height: 100%;
+    width: 50%;
+}
+.contactus-info-wrapper:hover {
+    color: red;
+    transition: .3s ease-in-out;
+}
+.contactus-info a {
+    text-decoration: none;
+    color: black;
+}
+.contactus-info a:hover {
+    text-decoration: underline;
+    color: red;
+    transition: .3s ease-in-out;
+}
+.beeper-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.beeper-img {
+    width: 80%;
+    animation: vibrate 0.5s infinite paused;
+    transition: transform 0.5s ease;
+}
+.contactus-info-wrapper:hover .beeper-img {
+    animation-play-state: running;
+}
+
+.gym-location-map {
+    height: 50vh;
+    width: 50%;
+}
