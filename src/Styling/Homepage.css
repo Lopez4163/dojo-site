@@ -87,7 +87,36 @@
     height: 50vh;
     width: 50%;
 }
-
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.powered-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.contacts-info {
+    padding-left: 10px;
+}
 
 
 @media screen and (max-width: 970px) {
