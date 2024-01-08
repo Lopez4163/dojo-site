@@ -45,34 +45,6 @@ const Home = () => {
             <section className='contactus-componenet-container'>
                 <ContactUsComp/>
             </section>
-            <footer className='footer-container'>
-                <div className='footer-wrapper'>
-                    <div className='footer-logo'>
-                        <img src='https://i.imgur.com/8Z1zZ1V.png' alt='logo' />
-                    </div>
-                    <div className='contact-info'>
-                        <Link to='/' className='contact-link'><h3>Home</h3></Link>
-                        <Link to='/AboutUs' className='contact-link'><h3>About Us</h3></Link>
-                        <Link to='/AboutBJJ' className='contact-link'><h3>Street Legal Jiu Jitsu</h3></Link>
-                        <Link to={'/Schedule'} className='contact-link'><h3>Schedule</h3></Link>
-                        <Link to={'/ContactUs'} className='contact-link'><h3>Contact Us</h3></Link>
-                    </div>
-                    <div className='contacts'>
-                        <h2 className='contacts-title`'>Street Legal Jiu Jitsu</h2>
-                        <div className='contacts-info'>
-                            <h3>Phone: 718-555-5555</h3>
-                            <h3>Address: 52 Duane St 7th floor, New York, NY 10007
-                            </h3>
-                            <h3>Instagram</h3>
-                        </div>
-
-                    </div>
-                </div>
-                <div className='powered-by'>
-                    <h3>The Street Legal is Powered by the streets...</h3>
-                </div>
-            </footer>
-
         </div>
     )
 }

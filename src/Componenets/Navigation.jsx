@@ -35,7 +35,7 @@ const Navigation = () => {
                         <Link to="/AffiliateProgram">Affiliate Program</Link>
                     </li>
                     <li className='navigation-link'>
-                        <Link to="/ContactUs">Contact Us</Link>
+                        <Link to="/ContactUsPge">Contact Us</Link>
                     </li>
                     <li className='student-instructor-link'>
                         <Link to="/Student">Student</Link>

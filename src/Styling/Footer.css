@@ -1,0 +1,39 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    gap: 50px;
+    font-family: 'Permanent Marker', cursive;
+    background-color: #424242;
+    color: white;
+}
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.contact-link:hover {
+    color: darkgrey;
+}
+.contacts {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.contacts-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.powered-by {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

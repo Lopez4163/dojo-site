@@ -1,0 +1,52 @@
+.afilliate-program-container {
+
+    padding: 20px;
+}
+.afilliate-container {
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    width: 100%;
+    padding: 70px;
+    gap: 40px;
+}
+.affiliate-summary {
+    width: 100%;
+}
+.affiliate-form {
+    width: 100%;
+
+}
+li {
+    list-style: none;
+    margin: 10px;
+}
+.title-1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Permanent Marker', cursive;
+}
+.error-message {
+     color: red;
+     margin-top: 5px; /* Adjust spacing based on your design */
+ }
+
+.error-input {
+    border: 1px solid red;
+    animation: shake 0.5s; /* Apply a shake animation for emphasis */
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 80% {
+        transform: translateX(5px);
+    }
+    30%, 50%, 70% {
+        transform: translateX(-10px);
+    }
+    40%, 60% {
+        transform: translateX(10px);
+    }
+}
+

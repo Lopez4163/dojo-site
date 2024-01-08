@@ -1,0 +1,66 @@
+.jj-program-container {
+    font-family: 'Permanent Marker', cursive;
+    padding: 50px;
+    color: red;
+}
+.jj-program-title {
+    text-align: center;
+    margin: 10px;
+}
+.jj-program-bio {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+.jj-program-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 10px;
+}
+.jj-program-bio:hover .jj-program-text,jj-program-title {
+    color: black;
+    transition: .3s ease-in-out;
+
+}
+.overview {
+}
+.jj-image-wrapper {
+    width: 50%;
+}
+
+.jj-image {
+    width: 100%;
+}
+.aboutbjj-contactus-banner {
+    background-color: darkred;
+    font-family: 'Permanent Marker', cursive;
+}
+.contactus-banner1 {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+.c-button {
+    display: block;
+    padding: 15px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: #b40505;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.c-button:hover {
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+}
+.aboutbjj-contactus-banner:hover .banner-specific-text {
+    color: white;
+    transition: .3s ease-in-out;
+
+}
