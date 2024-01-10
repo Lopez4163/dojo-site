@@ -1,0 +1,111 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 20rem; /* Set width using rem units */
+    padding: 1.5rem; /* Set padding using rem units */
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem; /* Set border-radius using rem units */
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Set box-shadow using rem units */
+    margin-bottom: 10vh;
+    background: GhostWhite;
+    background: rgba(255, 255, 255, 0.8);
+
+}
+.form-title {
+    text-align: center;
+    margin-bottom: 1.25rem; /* Set margin-bottom using rem units */
+
+}
+.form {
+       display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        margin-top: 1.25rem;
+}
+.form input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+    outline: none;
+}
+.remember-me-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .50rem;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+}
+
+.error {
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+}
+#password {
+    margin-top: 0.25rem;
+}
+.forgot-password-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    cursor: pointer;
+    transition: color 0.3s; /* Adding a smooth transition effect for color change */
+
+    &:hover {
+        color: #007bff; /* Change the color on hover, you can adjust this to your preferred hover color */
+    }
+}
+
+.checkbox-div {
+    display: flex;
+    gap: 5px;
+
+    input[type='checkbox'] {
+
+    }
+    label {
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+    }
+    &:hover {
+        input[type='checkbox'] {
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+            cursor: pointer;
+        }
+        label {
+            color: #007bff;
+        }
+    }
+}
+input[type='submit'] {
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
+}
+
+input[type='submit']:hover {
+    /* Your styles for the submit button on hover */
+    cursor: pointer;
+    background-color: #007bff; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+    /* Additional styles if needed */
+}
+.sign-up-link {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    color: #007bff;
+    transition: color 0.3s; /* Smooth transition for text color */
