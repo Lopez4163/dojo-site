@@ -13,7 +13,7 @@ const Footer = () => {
                     <Link to='/AboutUs' className='contact-link'><h5>About Us</h5></Link>
                     <Link to='/AboutBJJ' className='contact-link'><h5>Street Legal Jiu Jitsu</h5></Link>
                     <Link to={'/Schedule'} className='contact-link'><h5>Schedule</h5></Link>
-                    <Link to={'/ContactUsPge'} className='contact-link'><h5>Contact Us</h5></Link>
+                    <Link to={'/ContactUsPage'} className='contact-link'><h5>Contact Us</h5></Link>
                 </div>
                 <div className='contacts'>
                     <h3 className='contacts-title`'>Street Legal Jiu Jitsu</h3>

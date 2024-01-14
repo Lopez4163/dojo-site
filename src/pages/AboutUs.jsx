@@ -11,7 +11,7 @@ import Instructor3 from '../assets/instructor3.jpg'
 
 const AboutUs = () => {
     return (
-        <body>
+        <div>
         <section className='upper-container'>
             <div className='upper-container-img' style={{backgroundImage: `url(${Submission}`}}>
             </div>
@@ -20,7 +20,7 @@ const AboutUs = () => {
                 <h4 className='aboutus-info-text'>When the city streets get mean you best believe well be getting you lean!</h4>
                 <h4 className='aboutus-info-text'>Street legal Jiu Jitsu was built in the cold winter days around trash can fires, harnessing true street knowledge.
                 That mixed with pure jiu Jitsu created the animal we have to tame and teach, Street Jitz!</h4>
-                <Link to='/ContactUsPge' className='contactus-button'>Contact Us</Link>
+                <Link to='/ContactUsPage' className='contactus-button'>Contact Us</Link>
             </div>
         </section>
         <div className='instructor-container'>
@@ -70,7 +70,7 @@ const AboutUs = () => {
         <section>
 
         </section>
-        </body>
+        </div>
     )
 }
 export default AboutUs

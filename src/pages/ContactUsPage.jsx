@@ -1,8 +1,8 @@
 import React from 'react'
-import ContactUsComp from '../Componenets/ContactUsComp.jsx'
+import ContactUsComp from '../Components/ContactUsComp.jsx'
 import '../Styling/ContactUsPage.css'
 import ContactUsBanner from '../assets/contactus-banner.jpeg'
-const ContactUsPge = () => {
+const ContactUsPage = () => {
     return (
         <div>
             <section className='contactus-banner' style={{backgroundImage: `url(${ContactUsBanner}`}}>
@@ -15,4 +15,4 @@ const ContactUsPge = () => {
 
     )
 }
-export default ContactUsPge
+export default ContactUsPage

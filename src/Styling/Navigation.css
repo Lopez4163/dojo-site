@@ -42,6 +42,8 @@ header {
     color: dimgrey;
 }
 .student-instructor-link a {
+    height: auto;
+    width: 120px;
     display: block;
     padding: 15px;
     border: 1px solid black;
@@ -50,6 +52,7 @@ header {
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
 }
 .student-instructor-link a:hover {
     background-color: darkred;

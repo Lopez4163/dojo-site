@@ -1,10 +1,13 @@
+import React, { useRef } from 'react';
 import '../Styling/Schedule.css'
 import ContactUsBanner from "../assets/contactus-banner.jpeg";
-import React from "react";
 import {Link} from "react-router-dom";
+
 const Schedule = () => {
+    const nodeRef = useRef(null);
+
     return (
-        <div>
+        <div ref={nodeRef}>
             <section className='contactus-banner' style={{backgroundImage: `url(${ContactUsBanner}`}}>
                 <h1>Schedule</h1>
             </section>
@@ -165,7 +168,7 @@ const Schedule = () => {
                     <div className='banner-text'>
                         <h3 className='banner-specific-text'>If not convinced, feel free to give us a call, and we'll be happy to schedule a free trial for you.</h3>
                     </div>
-                    <Link to='/ContactUsPge' className='c-button'>Contact Us</Link>
+                    <Link to='/ContactUsPage' className='c-button'>Contact Us</Link>
                 </div>
             </section>
         </div>

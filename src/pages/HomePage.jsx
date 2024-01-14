@@ -3,8 +3,8 @@ import '../Styling/Homepage.css'
 import aboutUsImg from '../assets/homepage-aboutus.jpeg'
 import jiujitsuImg from '../assets/homepage-jj.jpeg'
 import {Link} from "react-router-dom";
-import ContactUsComp from "../Componenets/ContactUsComp.jsx";
-const Home = () => {
+import ContactUsComp from "../Components/ContactUsComp.jsx";
+const HomePage = () => {
     return (
 
         <div className='homepage-container'>
@@ -48,4 +48,4 @@ const Home = () => {
         </div>
     )
 }
-export default Home
+export default HomePage

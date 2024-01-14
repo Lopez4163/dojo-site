@@ -1,5 +1,5 @@
 import ContactUsBanner from "../assets/contactus-banner.jpeg";
-import ContactUsComp from "../Componenets/ContactUsComp.jsx";
+import ContactUsComp from "../Components/ContactUsComp.jsx";
 import '../Styling/AboutBJJ.css'
 import TeachingJJImg from '../assets/Teachingjj.jpeg'
 import { Outlet, Link } from "react-router-dom";
@@ -36,7 +36,7 @@ const AboutBjj = () => {
                     <div className='banner-text'>
                         <h3 className='banner-specific-text'>If not convinced, feel free to give us a call, and we'll be happy to schedule a free trial for you.</h3>
                     </div>
-                    <Link to='/ContactUsPge' className='c-button'>Contact Us</Link>
+                    <Link to='/ContactUsPage' className='c-button'>Contact Us</Link>
                 </div>
             </section>
         </div>

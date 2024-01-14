@@ -10,17 +10,15 @@
     height: 20rem;
     width: 20rem; /* Set width using rem units */
     padding: 1.5rem; /* Set padding using rem units */
-    border: 1px solid #ccc;
-    border-radius: 0.3125rem; /* Set border-radius using rem units */
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1); /* Set box-shadow using rem units */
+    border-radius: 10px; /* Set border-radius using rem units */
+    background-color: #092635;
     margin-bottom: 10vh;
-    background: GhostWhite;
-    background: rgba(255, 255, 255, 0.8);
 
 }
 .form-title {
     text-align: center;
     margin-bottom: 1.25rem; /* Set margin-bottom using rem units */
+    color: white;
 
 }
 .form {
@@ -30,13 +28,30 @@
         height: 100%;
         margin-top: 1.25rem;
 }
-.form input {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.3125rem;
-    font-size: 0.875rem;
+.transparent-input {
+    background-color: rgba(255, 255, 255, 0.2); /* White with 20% transparency */
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.transparent-input:focus {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% transparency on focus */
     outline: none;
 }
+
+.transparent-input::placeholder {
+    color: #aaa; /* Placeholder text color */
+}
+
+.transparent-input:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* White with 30% transparency on hover */
+}
+
+
 .remember-me-section {
     display: flex;
     justify-content: space-between;
@@ -63,7 +78,7 @@
     border: none;
     padding: 0;
     margin: 0;
-    color: inherit;
+    color: white;
     cursor: pointer;
     transition: color 0.3s; /* Adding a smooth transition effect for color change */
 
@@ -75,6 +90,7 @@
 .checkbox-div {
     display: flex;
     gap: 5px;
+    color: #ffffff;
 
     input[type='checkbox'] {
 
@@ -92,20 +108,57 @@
         }
     }
 }
-input[type='submit'] {
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background color and text color */
-}
-
-input[type='submit']:hover {
-    /* Your styles for the submit button on hover */
-    cursor: pointer;
-    background-color: #007bff; /* Change the background color on hover */
-    color: #fff; /* Change the text color on hover */
-    /* Additional styles if needed */
-}
 .sign-up-link {
     text-align: center;
     margin-top: 1.25rem;
     font-size: 0.875rem;
-    color: #007bff;
-    transition: color 0.3s; /* Smooth transition for text color */
+    color: #ffffff;
+    transition: color 0.3s;
+}
+.sign-up-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s; /* Adding a smooth transition effect for color change */
+
+    &:hover {
+        color: #007bff; /* Change the color on hover, you can adjust this to your preferred hover color */
+    }
+}
+.create-signin-button {
+    background-color: #1d7a60;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.create-signin-button:hover {
+    background-color: #19a174; /* Dark Green */
+}
+.auth-details {
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.signed-out-in {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+.signed-out-in button {
+    color: #1d7a60;
+    background-color: transparent;
+    border: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+.signed-out-in button:hover {
+    cursor: pointer;
+    color: #19a174;
+}

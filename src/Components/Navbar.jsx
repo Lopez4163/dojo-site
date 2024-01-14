@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import '../Styling/Navigation.css'
 
 
-const Navigation = () => {
+const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     return (
         <nav className='navigation-container'>
@@ -35,16 +35,13 @@ const Navigation = () => {
                         <Link to="/AffiliateProgram">Affiliate Program</Link>
                     </li>
                     <li className='navigation-link'>
-                        <Link to="/ContactUsPge">Contact Us</Link>
+                        <Link to="/ContactUsPage">Contact Us</Link>
                     </li>
                     <li className='student-instructor-link'>
-                        <Link to="/Student">Student</Link>
-                    </li>
-                    <li className='student-instructor-link'>
-                        <Link to="/Instructor">Instructor</Link>
+                        <Link to="/Login">Login</Link>
                     </li>
                 </ul>
         </nav>
     )
 }
-export default Navigation
+export default Navbar
