@@ -3,7 +3,7 @@ import '../Styling/Schedule.css'
 import ContactUsBanner from "../assets/contactus-banner.jpeg";
 import {Link} from "react-router-dom";
 
-const Schedule = () => {
+const SchedulePage = () => {
     const nodeRef = useRef(null);
 
     return (
@@ -174,4 +174,4 @@ const Schedule = () => {
         </div>
     )
 }
-export default Schedule
+export default SchedulePage

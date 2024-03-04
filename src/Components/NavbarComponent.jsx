@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 import '../Styling/Navigation.css'
 
 
-const Navbar = () => {
+const NavbarComponent = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     return (
         <nav className='navigation-container'>
@@ -23,25 +23,25 @@ const Navbar = () => {
                         <Link to="/">Home</Link>
                     </li>
                     <li className='navigation-link'>
-                        <Link to="/AboutUs">About Us</Link>
+                        <Link to="/AboutUsPage">About Us</Link>
                     </li>
                     <li className='navigation-link'>
                         <Link to="/AboutBJJ">About BJJ</Link>
                     </li>
                     <li className='navigation-link'>
-                        <Link to="/Schedule">Schedule</Link>
+                        <Link to="/SchedulePage">SchedulePage</Link>
                     </li>
                     <li className='navigation-link'>
-                        <Link to="/AffiliateProgram">Affiliate Program</Link>
+                        <Link to="/AffiliateProgramPage">Affiliate Program</Link>
                     </li>
                     <li className='navigation-link'>
                         <Link to="/ContactUsPage">Contact Us</Link>
                     </li>
                     <li className='student-instructor-link'>
-                        <Link to="/Login">Login</Link>
+                        <Link to="/LoginPage">LoginPage</Link>
                     </li>
                 </ul>
         </nav>
     )
 }
-export default Navbar
+export default NavbarComponent

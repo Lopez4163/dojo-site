@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    /*overflow-y: scroll;*/
+    background-color: rgb(4, 13, 18);
+    color: #fff;
+    height: 100vh;
+    width: 45vh;
+}
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #092635;
+    margin: 30px;
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+.profile-section-ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    /*background-color: #092635;*/
+    /*overflow-y: scroll;*/
+    /*scroll-behavior: smooth;*/
+}
+.profile-section-ul-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #1d7a60;
+    margin: 20px;
+    border-radius: 10px;
+}
+.profile-li {
+    display: flex;
+    justify-content: center;
+}
+.profile-li-name {
+    margin-bottom: 30px ;
+}
+.profile-user-name {
+    font-size: 25px;
+}
+.profile-pic-container {
+    position: relative;
+}
+
+.add-image-label {
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    top: -20px;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 20px;
+    width: 10px;
+}
+
+#profileImageInput {
+    display: none;
+}
+
+.profile-pic {
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.title {
+    text-align: center;
+}
+.profile-li-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+}
+.edit-button-wrapper {
+    background-color: #1d7a60;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2px;
+    border-radius: 10%;
+}
+.edit-button-wrapper:hover {
+    cursor: pointer;
+    background-color: #19a174;
+}
+#edit-btn {
+    color: #fff;
+}
+
+.belt {
+    margin-top: 5px;
+    height: 20px;
+    width: 150px;
+}
+.tight-start {
+    display: flex;
+    justify-content: flex-start;
+}
+/*.smaller-icon {*/
+/*    height: 2rem;*/
+/*    width: 20px;*/
+/*}*/
+
+/* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #19a174; /* Set the color of the thumb (the draggable part) */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #0a1013; /* Set the color of the track (the non-draggable part) */
+}
+

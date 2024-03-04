@@ -9,7 +9,7 @@ import Instructor3 from '../assets/instructor3.jpg'
 
 
 
-const AboutUs = () => {
+const AboutUsPage = () => {
     return (
         <div>
         <section className='upper-container'>
@@ -73,4 +73,4 @@ const AboutUs = () => {
         </div>
     )
 }
-export default AboutUs
+export default AboutUsPage

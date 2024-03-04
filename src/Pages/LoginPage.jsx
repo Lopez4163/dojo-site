@@ -1,9 +1,8 @@
-// src/pages/Login.jsx
+// src/pages/LoginPage.jsx
 import React from 'react';
-import { Navigate } from 'react-router-dom';
-import LoginPortal from '../Components/LoginPortal.jsx';
+import LoginForm from '../Components/LoginForm.jsx';
 
-const Login = () => {
+const LoginPage = () => {
 
 
     return (
@@ -11,7 +10,7 @@ const Login = () => {
             <div className="student-login-content">
                 <section>
                     <div className="student-login-form">
-                        <LoginPortal/>
+                        <LoginForm/>
                     </div>
                 </section>
             </div>
@@ -19,4 +18,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LoginPage;

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from './Auth/firebase.js';
+import { useNavigate } from 'react-router-dom';
 import '../Styling/StudentLoginForm.css';
-import stuLoginImgBg from '../assets/student-login-form.jpeg';
 import CreatAccountForm from './CreatAccountForm.jsx';
-import AuthDetails from "./Auth/AuthDetails.jsx";
+import { auth } from '../Auth/firebase.js';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import AuthDetails from "../Auth/AuthDetails.jsx";
+import SignOutComponent from "./SignOutComponent.jsx";
+import {AuthProvider} from "../Auth/AuthContext.jsx";
+
+
 
 const LoginForm = ({ title }) => {
     const [formData, setFormData] = useState(false);
@@ -14,71 +18,40 @@ const LoginForm = ({ title }) => {
     const [password, setPassword] = useState('');
     const [errors, setErrors] = useState({})
     const [showOverlay, setShowOverlay] = useState(false);
+    const navigate = useNavigate(); // Add useNavigate
+
 
 
     const handleSignUp = () => {
         setShowOverlay(true);
     };
 
-const signIn = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user)
-        })
-        .catch((error) => {
+    const signIn = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword( auth, email, password)
+            .then((userCredential) => {
+                    console.log('SignIn Component HIT:', userCredential);
+                    navigate('/gymportal')
+                    console.log('Successfully navigated to /StudentDashBoard');
+
+
+            }).catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode, errorMessage)
+            console.log('errorCode:', errorCode);
+            console.log('errorMessage:', errorMessage);
         });
-}
-
-    // const signIn = (e) => {
-    //     e.preventDefault();
-    //     signInWithEmailAndPassword(auth, email, password)
-    //         .then((userCredential) => {
-    //             // Signed in
-    //             const user = userCredential.user;
-    //             console.log(user);
-    //         })
-    //         .catch((error) => {
-    //             const errorCode = error.code;
-    //             let errorMessage = '';
-    //
-    //             switch (errorCode) {
-    //                 case 'auth/invalid-email':
-    //                     errorMessage = 'Invalid email address.';
-    //                     break;
-    //                 case 'auth/user-disabled':
-    //                     errorMessage = 'User account is disabled.';
-    //                     break;
-    //                 case 'auth/user-not-found':
-    //                     errorMessage = 'User not found. Please sign up first.';
-    //                     break;
-    //                 case 'auth/wrong-password':
-    //                     errorMessage = 'Invalid password.';
-    //                     break;
-    //                 default:
-    //                     errorMessage = 'An error occurred during login. Please try again later.';
-    //             }
-    //
-    //             console.error(errorCode, errorMessage);
-    //             // Set the errors state to display the error to the user
-    //             setErrors({ login: errorMessage });
-    //         });
-    // };
-    return (
+    }
+        return (
         <div
             className='form-container'
             style={{ backgroundColor: '#040D12'}}
         >
             <div className='form-wrapper'>
                 <div className='form-title'>
-                    <h1>{title}</h1>
+                    <h1>Login</h1>
                 </div>
-                <form onSubmit={signIn} className='form'>
+                <form  className='form' onSubmit={signIn}>
                     <div className='input-wrapper'>
                         <input
                             className='transparent-input'
@@ -130,12 +103,12 @@ const signIn = (e) => {
                             </button>
                         </p>
                     </div>
-                    <div className='auth-details'>
-                        <AuthDetails/>
-                        {errors.login && <span className="error">{errors.login}</span>}
-                    </div>
                 </form>
-
+                <br></br>
+                {/*<AuthProvider>*/}
+                {/*    <AuthDetails/>*/}
+                {/*    <SignOutComponent/>*/}
+                {/*</AuthProvider>*/}
             </div>
             {showOverlay && (
                 <div className='overlay'>

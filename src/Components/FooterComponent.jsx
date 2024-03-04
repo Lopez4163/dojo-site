@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import '../Styling/Footer.css'
-const Footer = () => {
+const FooterComponent = () => {
     return (
         <footer className='footer-container'>
             <div className='footer-wrapper'>
@@ -10,9 +10,9 @@ const Footer = () => {
                 </div>
                 <div className='contact-info'>
                     <Link to='/' className='contact-link'><h3>Home</h3></Link>
-                    <Link to='/AboutUs' className='contact-link'><h5>About Us</h5></Link>
+                    <Link to='/AboutUsPage' className='contact-link'><h5>About Us</h5></Link>
                     <Link to='/AboutBJJ' className='contact-link'><h5>Street Legal Jiu Jitsu</h5></Link>
-                    <Link to={'/Schedule'} className='contact-link'><h5>Schedule</h5></Link>
+                    <Link to={'/SchedulePage'} className='contact-link'><h5>Schedule</h5></Link>
                     <Link to={'/ContactUsPage'} className='contact-link'><h5>Contact Us</h5></Link>
                 </div>
                 <div className='contacts'>
@@ -32,4 +32,4 @@ const Footer = () => {
         </footer>
     )
 }
-export default Footer
+export default FooterComponent

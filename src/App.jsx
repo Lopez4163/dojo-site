@@ -1,42 +1,46 @@
 // src/App.jsx
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar.jsx';
-import HomePage from './pages/HomePage.jsx';
-import AboutUs from './pages/AboutUs';
-import AboutBjj from './pages/AboutBJJ';
-import Schedule from './pages/Schedule';
-import AffiliateProgram from './pages/AffiliateProgram';
-import ContactUsPage from './pages/ContactUsPage.jsx';
-import Login from './pages/Login.jsx';
-import Footer from './Components/Footer';
-import RouteGuard from './Components/Auth/RouteGuard.jsx';
-import StudentDashboard from './GymApp/StudentDashboard.jsx';
-import InstructorDashboard from './GymApp/InstructorDashboard.jsx';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import {AuthProvider} from "./Auth/AuthContext.jsx";
+import PrivateRoute from "./Auth/PrivateRoute.jsx";
+import NavbarComponent from './Components/NavbarComponent.jsx';
+import HomePage from './Pages/HomePage.jsx';
+import AboutUsPage from './Pages/AboutUsPage.jsx';
+import AboutBJJPage from './Pages/AboutBJJPage.jsx';
+import SchedulePage from './Pages/SchedulePage.jsx';
+import AffiliateProgramPage from './Pages/AffiliateProgramPage.jsx';
+import ContactUsPage from './Pages/ContactUsPage.jsx';
+import LoginPage from './Pages/LoginPage.jsx';
+import FooterComponent from './Components/FooterComponent.jsx';
+import StudentDashboardPage from './GymApp/StudentDashboardPage.jsx';
+import loginForm from "./Components/LoginForm.jsx";
+
+
 
 
 
 function App() {
     return (
+        <AuthProvider>
         <div className='app'>
             <Routes>
                 <Route
                     path="/"
                     element={
                         <>
-                            <Navbar />
+                            <NavbarComponent />
                             <HomePage />
-                            <Footer />
+                            <FooterComponent />
                         </>
                     }
                 />
                 <Route
-                    path="/AboutUs"
+                    path="/AboutUsPage"
                     element={
                         <>
-                            <Navbar />
-                            <AboutUs />
-                            <Footer />
+                            <NavbarComponent />
+                            <AboutUsPage />
+                            <FooterComponent />
                         </>
                     }
                 />
@@ -44,29 +48,29 @@ function App() {
                     path="/AboutBJJ"
                     element={
                         <>
-                            <Navbar />
-                            <AboutBjj />
-                            <Footer />
+                            <NavbarComponent />
+                            <AboutBJJPage />
+                            <FooterComponent />
                         </>
                     }
                 />
                 <Route
-                    path="/Schedule"
+                    path="/SchedulePage"
                     element={
                         <>
-                            <Navbar />
-                            <Schedule />
-                            <Footer />
+                            <NavbarComponent />
+                            <SchedulePage />
+                            <FooterComponent />
                         </>
                     }
                 />
                 <Route
-                    path="/AffiliateProgram"
+                    path="/AffiliateProgramPage"
                     element={
                         <>
-                            <Navbar />
-                            <AffiliateProgram />
-                            <Footer />
+                            <NavbarComponent />
+                            <AffiliateProgramPage />
+                            <FooterComponent />
                         </>
                     }
                 />
@@ -74,42 +78,34 @@ function App() {
                     path="/ContactUsPage"
                     element={
                         <>
-                            <Navbar />
+                            <NavbarComponent />
                             <ContactUsPage />
-                            <Footer />
+                            <FooterComponent />
                         </>
                     }
                 />
                 <Route
-                    path="/Login"
+                    path="/LoginPage"
                     element={
                         <>
-                            <Navbar />
-                            <Login />
-                            <Footer />
+                            <NavbarComponent />
+                            <LoginPage />
+                            <FooterComponent />
                         </>
                     }
                 />
                 <Route
-                    path="/student-dashboard"
-                    element={
-                        <RouteGuard>
-                            {/* Render Student Dashboard component */}
-                            <StudentDashboard />
-                        </RouteGuard>
-                    }
+                    path="/gymportal"
+                    element={<Navigate to="/StudentDashboardPage" />}
                 />
                 <Route
-                    path="/instructor-dashboard"
-                    element={
-                        <RouteGuard>
-                            {/* Render Instructor Dashboard component */}
-                            <InstructorDashboard />
-                        </RouteGuard>
-                    }
+                    path="/StudentDashboardPage"
+                    element={<PrivateRoute element={<StudentDashboardPage />} redirectTo="/LoginPage" />}
                 />
+
             </Routes>
         </div>
+        </AuthProvider>
     );
 }
 

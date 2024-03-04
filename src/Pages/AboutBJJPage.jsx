@@ -5,7 +5,7 @@ import TeachingJJImg from '../assets/Teachingjj.jpeg'
 import { Outlet, Link } from "react-router-dom";
 
 
-const AboutBjj = () => {
+const AboutBJJPage = () => {
     return (
         <div>
             <section className='contactus-banner' style={{backgroundImage: `url(${ContactUsBanner}`}}>
@@ -42,4 +42,4 @@ const AboutBjj = () => {
         </div>
     )
 }
-export default AboutBjj
+export default AboutBJJPage

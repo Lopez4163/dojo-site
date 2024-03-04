@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ContactUsBanner from "../assets/contactus-banner.jpeg";
 import '../Styling/AffiliateProgram.css'
-const AffiliateProgram = () => {
+const AffiliateProgramPage = () => {
     const [formSubmit, setFormSubmit] = useState(false)
     const [formErrors, setFormErrors] = useState('');
 
@@ -194,4 +194,4 @@ const AffiliateProgram = () => {
         </div>
     )
 }
-export default AffiliateProgram
+export default AffiliateProgramPage
